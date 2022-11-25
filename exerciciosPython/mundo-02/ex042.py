@@ -1,0 +1,1 @@
+# Analisado triângulo v2 (já fiz no ex035)
