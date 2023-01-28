@@ -1,9 +1,9 @@
-from ex115.lib.interface import cabecalho
+from lib.interface import cabecalho
 
 
-def arquivo_existe(nome):
+def arquivo_existe(arq):
     try:
-        a = open(nome, 'rt')
+        a = open(arq, 'rt')
         a.close()
     except FileNotFoundError:
         return False
@@ -11,9 +11,9 @@ def arquivo_existe(nome):
         return True
 
 
-def criar_arquivo(nome):
+def criar_arquivo(arq):
     try:
-        a = open(nome, 'wt+')
+        a = open(arq, 'wt+')
         a.close()
     except:
         print('Houve um erro na criação do arquivo!')
@@ -21,13 +21,12 @@ def criar_arquivo(nome):
         print(f'Arquivo {nome} criado')
 
 
-def ler_arquivo(nome):
+def ler_arquivo(arq):
     try:
-        a = open(nome, 'rt')
+        a = open(arq, 'rt')
     except:
         print('Não foi possível ler o arquivo!')
     else:
-        cabecalho('PESSOAS CADASTRADAS')
         print(a.read())
     finally:
         a.close()
@@ -40,9 +39,16 @@ def cadastrar(arq, nome, idade):
         print('Houve um erro na abertura do arquivo')
     else:
         try:
-            a.write(f'{nome};{idade}')
+            a.write(f'{nome}  {idade}\n')
         except:
             print('Houve um ERRO ao escrever o cadastro')
         else:
             print(f'O registro de {nome} foi criado')
             a.close()
+            
+
+def limpar_arquivo(arq):
+    try:
+        a = open(arq)
+    except:
+        print("Ocorreu um erro ao limpar o arquivo!")

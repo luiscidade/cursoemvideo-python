@@ -1,1 +1,3 @@
-Luis;22Luis;22
+Maria  89
+Márcio  47
+João  13

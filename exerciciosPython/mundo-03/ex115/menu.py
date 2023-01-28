@@ -1,3 +1,5 @@
+# menu antigo?
+
 def menu():
     while True:
         print('--' * 30)
