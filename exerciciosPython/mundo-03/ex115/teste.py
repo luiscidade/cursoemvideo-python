@@ -23,8 +23,10 @@ def main():
         else:
             print('Opção inválida! Tente novamente...')
         sleep(2)
-
+        
+    limpar_arquivo("arquivo.txt")
 
 if __name__ == '__main__':
     main()
+    
 

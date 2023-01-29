@@ -18,7 +18,7 @@ def criar_arquivo(arq):
     except:
         print('Houve um erro na criação do arquivo!')
     else:
-        print(f'Arquivo {nome} criado')
+        print(f'Arquivo {arq} criado')
 
 
 def ler_arquivo(arq):
@@ -49,6 +49,7 @@ def cadastrar(arq, nome, idade):
 
 def limpar_arquivo(arq):
     try:
-        a = open(arq)
+        a = open(arq, 'w')
+        a.close()
     except:
         print("Ocorreu um erro ao limpar o arquivo!")
